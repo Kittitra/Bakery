@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+้html, body {
+  width: 100dvw;
+  overflow-x: hidden;
+  background-color: #F3E9DC;
+  font-family: "General Sans", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Baloo2";
+    src: url("/fonts/Baloo2-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900; /* variable font weight range */
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Quicksand";
+    src: url("/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+@layer utilities {
+  .header-text {
+    @apply md:text-6xl text-2xl font-Baloo2 font-bold;
+  }
+
+  .btn {
+    @apply  px-3 p-2 rounded-xl font-Quicksand font-semibold md:font-bold md:text-lg
+  }
+  
+  .hover-btn {
+    @apply transition-all duration-300 ease-in-out hover:-translate-y-2
+  }
+
+  .floating-nav {
+    @apply bg-white rounded-lg border;
+  }
+
+  .text-WithSymbols {
+    @apply font-semibold md:font-bold text-xs pt-3 text-center md:text-lg ;
+  }
+}
+
+
+
